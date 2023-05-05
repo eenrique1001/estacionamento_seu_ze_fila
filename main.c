@@ -82,12 +82,11 @@ int main()
             flag=0;
             i=0;
 
-            do{
+            while(i<max&&!flag){
                 if(f1.data[i].plate==c1.plate)
                     flag=1;
                 i++;
-
-            }while(i<max&&!flag);
+            }
             i=-1;
 
             if(flag){
@@ -122,7 +121,10 @@ int main()
                     printf("Carro de placa %d sendo movido da espera ao principal.\n", caux.plate);
                 }
             }
-            else printf("Carro nao encontrado, entre novamente!\n");
+            else{
+                printf("Carro nao encontrado, entre novamente!\n");
+                if(f1.end==f1.start) printf("Estacionamento vazio!\n");
+            } 
         }
         else if(acao == 'Q') printf("Saindo.\n");
         else printf("Acao Invalida! Entre novamente.\n");
