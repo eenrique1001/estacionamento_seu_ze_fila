@@ -52,7 +52,7 @@ int main()
 
     Fila f1, f2, f3;
     char acao;
-    int placa, i, flag, aux=0, cont=0, movs;
+    int i, flag, cont=0;
     Cars c1, caux;
 
     caux.movs=0;
